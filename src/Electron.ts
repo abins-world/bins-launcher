@@ -12,6 +12,7 @@ function create_window() {
     width: 1200,
     height: 600,
     kiosk: !isDev,
+    icon: path.join(__dirname, "../public/icon.png"),
     resizable: true,
     webPreferences: {
       // 2.

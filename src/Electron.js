@@ -3,7 +3,6 @@ exports.__esModule = true;
 var electron_1 = require("electron");
 var isDev = require("electron-is-dev");
 var path = require("path");
-var process_1 = require("process");
 // 1. GC가 일어나지 않도록 밖에 빼줌
 var main_window;
 function create_window() {
@@ -13,6 +12,7 @@ function create_window() {
         width: 1200,
         height: 600,
         kiosk: !isDev,
+        icon: path.join(__dirname, "../public/icon.png"),
         resizable: true,
         webPreferences: {
             // 2.
@@ -43,7 +43,5 @@ function create_window() {
 electron_1.app.on('ready', create_window);
 // Quit when all windows are closed.
 electron_1.app.on('window-all-closed', function () {
-    console.log("신발! 껏잖아! 이제 꺼 !");
     electron_1.app.quit();
-    process_1.exit;
 });

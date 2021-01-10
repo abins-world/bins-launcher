@@ -1,11 +1,13 @@
-import React from 'react';
-import logo from './Abins-world.png';
+// import React from 'react';
+// import logo from './Abins-world.png';
+// import logo2 from '../public/icon.png';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      {/* <header className="App-header">
+        
         <img src={logo} className="App-logo" alt="logo" />
         
         <p className="font">
@@ -20,10 +22,10 @@ function App() {
         
 
         <p className="font" >
-          비밀번호 : <input type="text" className="Box"/>
+          비밀번호 : <input type="password" className="ps"/>
           </p>
         
-      </header>
+      </header> */}
     </div>
   );
 }
