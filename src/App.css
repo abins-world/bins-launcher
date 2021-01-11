@@ -1,28 +1,5 @@
 
 
-.App{
-  background-image: url('./icon/background.png');
-	-webkit-animation: App 8s both;
-	        animation: App 8s both;
-}
-@-webkit-keyframes App {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes App {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
 
 
 
@@ -45,6 +22,7 @@
   font-size: 50%;
   font-family: 'a';
   padding-left: 0;
+  position: relative; top: 20px;
 }
 
 .font{
@@ -60,6 +38,8 @@
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   font-family: 'a';
   font-size: 50%;
+  
+  position: relative; top: 10px;
 }
 
 .complete{
@@ -67,17 +47,22 @@
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   margin-top: 0%;
   color: #e3b5c7;
+  
+  outline:none;
+  text-align: center;
   font-family: 'a';
   background-color: #903f5f;
   border:#903f5f;
   border-radius: 5px 5px 5px 5px;
-  outline:none;
+  /* outline:none;
+  box-shadow: 0 4px 16px #85405c; */
+  
+  box-shadow: 0 4px 16px #2d2d31;
 }
 .complete:hover{
 	background: #7f1f45;
 	cursor: pointer;
 }
-
 
 .complete:active{
   background: #a9416a;
@@ -89,6 +74,7 @@
   font-size: 50%;
   
   margin-top: -70px;
+  position: relative; top: 10px;
 }
 .fontminecraft{
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -110,6 +96,8 @@
   font-size: 100%;
   background-color: #454850;
   border:#454850;
+  
+  box-shadow: 0 4px 16px #1a1b1f;
   border-radius: 10px 10px 10px 10px;
   outline:none;
   text-align: center;
@@ -125,6 +113,8 @@
   background-color: #454850;
   border:#454850;
   text-align: center;
+  
+  box-shadow: 0 4px 16px #1a1b1f;
   border-radius: 10px 10px 10px 10px;
   outline:none;
   color: #1d1d1d;
@@ -151,8 +141,44 @@
   font-family: 'a';
   src: url('./pont/AppleSDGothicNeoB.ttf');
 }
-.App-header {
-  background-color: #282c34;
+
+
+.App{
+  
+  background-color: #f279be;
+  text-align: center;
+
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:4% 0%}
+  50%{background-position:97% 100%}
+  100%{background-position:4% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:4% 0%}
+  50%{background-position:97% 100%}
+  100%{background-position:4% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:4% 0%}
+  50%{background-position:97% 100%}
+  100%{background-position:4% 0%}
+}
+
+.css-selector {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  
+  background: linear-gradient(145deg, #f56387, #f083d8, #f58ede, #d4417e);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
+
+
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -166,7 +192,6 @@
   -webkit-user-select: none;
   user-select: none;
   
-
 }
 
 

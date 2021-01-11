@@ -18,7 +18,7 @@ import './App.css';
   return (
     <div className="App">
       
-      <header  className="App-header">
+      <header  className="css-selector">
         
         <img src={logo}  className="App-logo" alt="logo" />
        
@@ -28,34 +28,31 @@ import './App.css';
           먼저 로그인부터 해줄래?
         </p>
 
-
-
-        <p style={minecraft} className="fontminecraft" >
-          Minecraft 계정
-        </p>
-
-        <p style={id} className="font" >
-          <p style={id} className="email">
-            이메일
-          </p>
-          <input type="text"  className="Box"/>
-        </p>
-        
-
-        
-          <p style={id} className="password">
-            비밀번호
+          <p style={minecraft} className="fontminecraft" >
+            Minecraft 계정
           </p>
 
-
-
-          <p style={passworld} className="font" >
-            <input type="password"  className="ps"/>
-            <p>
-              <input style={complete} type="button" name="complete" value="로그인" className="complete"/>
+          <p style={id} className="font" >
+            <p style={id} className="email">
+              이메일
             </p>
+            <input type="text"  className="Box"/>
           </p>
+          
 
+          <p style={id} className="password">
+          비밀번호
+            </p>
+            
+
+
+
+            <p style={passworld} className="font" >
+              <input type="password"  className="ps"/>
+              <p>
+                <input style={complete} type="button" name="complete" value="로그인" className="complete"/>
+              </p>
+            </p>
           
           
 
