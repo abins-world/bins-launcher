@@ -21,17 +21,19 @@
 
   background-image: url('./icon/max.png');
   background-color: #5a5a5a;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
 }
 .mini{
-  background-image: url('./icon/mini.png');
-  width: 20px;
-  height: 20px;
-  position: relative; top: -50px;
+  
+  width: 50px;
+  height: 50px;
+  position: relative; top: 0;
 }
 
-
+.i{
+  position: relative; top: -50px;
+}
 
 .Drag{
   -webkit-app-region: drag;
@@ -48,8 +50,8 @@
 .passwordlink:hover {text-decoration: underline; color: #7965f3;}
 
 .passwordlink{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   font-size: 50%;
   font-family: 'a';
   padding-left: 0;
@@ -57,28 +59,29 @@
 }
 
 .font{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   font-family: 'a';
   
   margin-top: 3px;
   font-size: 50;
 }
 .email{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   font-family: 'a';
   font-size: 50%;
   
   position: relative; top: 10px;
 }
 .block{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
   background-color: #2d2d31;
   width : 40%;
   
+  box-shadow: 0 4px 16px #121213;
   border-radius: 20px;
   height: 50%;
 }
@@ -86,8 +89,8 @@
   color: #e3b5c7;
 }
 .complete{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   margin-top: 0%;
   color: #ffffff;
   
@@ -106,29 +109,29 @@
 	background: #7f1f45;
 	cursor: pointer;
 }
-
 .complete:active{
   background: #a9416a;
 }
 .password{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   font-family: 'a';
   font-size: 50%;
-  
   margin-top: -70px;
   position: relative; top: 10px;
+  
 }
-.fontminecraft{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+.minecraft{
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   font-family: 'a';
   font-size: 50;
-  margin-bottom: -50px;
+  
+  position: relative; top: -80px;
 }
-.App-logo {
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+.logo {
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
   height: 20vmin;
   margin-top: -5%;
@@ -136,8 +139,8 @@
 
 }
 .Box{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
   font-family: 'a';
   font-size: 100%;
@@ -152,8 +155,8 @@
 
 }
 .ps{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   
   letter-spacing: -8px;
   font-family: 'a';
@@ -190,8 +193,8 @@
 
 
 .App{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
   background-color: #f279be;
   text-align: center;
@@ -214,9 +217,9 @@
   100%{background-position:4% 0%}
 }
 
-.css-selector {
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+.css {
+  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   
   background: linear-gradient(145deg, #f56387, #f083d8, #f58ede, #d4417e);
   background-size: 800% 800%;

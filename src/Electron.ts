@@ -14,7 +14,7 @@ function create_window() {
     height: 800,
     autoHideMenuBar: true,
     kiosk: !isDev,
-    icon: path.join(__dirname, "./icon/icon.png"),
+    icon: path.join(__dirname, '/icon/icon.png'),
     resizable: true,
     backgroundColor: '#f279be',
     minHeight: 640,
