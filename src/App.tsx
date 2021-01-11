@@ -15,10 +15,13 @@ import './App.css';
   const minecraft={
     padding: "20px 0px 0px 0px"
   }
+
   return (
     <div className="App">
+      
+      <div className="Drag"></div>
       <header  className="css-selector">
-        
+      
         <img src={logo}  className="App-logo" alt="logo" />
        
         <p className="font">
@@ -26,7 +29,7 @@ import './App.css';
           
           먼저 로그인부터 해줄래?
         </p>
-
+        
         <div className="block"></div>
           
           <p style={minecraft} className="fontminecraft" >

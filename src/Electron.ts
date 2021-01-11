@@ -45,6 +45,28 @@ function create_window() {
   }
   // Emitted when the window is closed.
 }
+
+const remote = require('electron').remote
+const currentWindow = remote.getCurrentWindow()
+
+
+function window_close() {
+  currentWindow.close()
+}
+
+function window_minimize() {
+  currentWindow.minimize()
+}
+
+function window_Max_or_unMax() {
+  if(currentWindow.isMaximized()){
+    currentWindow.unmaximize();
+    return;
+  }
+  currentWindow.maximize()
+}
+
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
