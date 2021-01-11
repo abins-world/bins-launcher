@@ -41,7 +41,13 @@
   
   position: relative; top: 10px;
 }
-
+.block{
+  background-color: #2d2d31;
+  width : 40%;
+  
+  border-radius: 20px;
+  height: 50%;
+}
 .complete{
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -54,10 +60,10 @@
   background-color: #903f5f;
   border:#903f5f;
   border-radius: 5px 5px 5px 5px;
-  /* outline:none;
-  box-shadow: 0 4px 16px #85405c; */
+  box-shadow: 0 4px 16px #1a1b1f;
+
   
-  box-shadow: 0 4px 16px #2d2d31;
+  position: relative; top: 50px;
 }
 .complete:hover{
 	background: #7f1f45;

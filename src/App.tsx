@@ -28,6 +28,8 @@ import './App.css';
           먼저 로그인부터 해줄래?
         </p>
 
+        <div className="block">
+          
           <p style={minecraft} className="fontminecraft" >
             Minecraft 계정
           </p>
@@ -53,6 +55,7 @@ import './App.css';
                 <input style={complete} type="button" name="complete" value="로그인" className="complete"/>
               </p>
             </p>
+           </div>
           
           
 
