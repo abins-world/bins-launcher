@@ -46,6 +46,7 @@ function create_window() {
   // Emitted when the window is closed.
 }
 
+/*
 const remote = require('electron').remote
 const currentWindow = remote.getCurrentWindow()
 
@@ -65,6 +66,7 @@ function window_Max_or_unMax() {
   }
   currentWindow.maximize()
 }
+*/
 
 
 // This method will be called when Electron has finished
