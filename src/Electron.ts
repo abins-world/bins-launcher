@@ -9,11 +9,13 @@ function create_window() {
   main_window = new BrowserWindow({
     // 이것들은 제가 사용하는 설정이니 각자 알아서 설정 하십시오.
     center: true,
-    width: 1200,
-    height: 600,
+    width: 1750,
+    height: 850,
+    autoHideMenuBar: true,
     kiosk: !isDev,
-    icon: path.join(__dirname, "../public/icon.png"),
+    icon: path.join(__dirname, "./icon/icon.ico"),
     resizable: true,
+    backgroundColor: '#282c34',
     webPreferences: {
       // 2.
       // 웹 애플리케이션을 데스크탑으로 모양만 바꾸려면 안 해도 되지만,

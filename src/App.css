@@ -1,16 +1,51 @@
 .App {
   text-align: center;
 }
-/* }
+.passwordlink:link {text-decoration: none; color: #605b7f;}
+.passwordlink:visited {text-decoration: none; color: #605b7f;}
+.passwordlink:active {text-decoration: none; color: #605b7f;}
+.passwordlink:hover {text-decoration: underline; color: #7965f3;}
+
+.passwordlink{
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  font-size: 50%;
+  font-family: 'a';
+  padding-left: 0;
+}
+
 .font{
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   font-family: 'a';
+  
+  margin-top: 3px;
+  font-size: 50;
 }
-
+.email{
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  font-family: 'a';
+  font-size: 50%;
+}
+.password{
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  font-family: 'a';
+  font-size: 50%;
+  
+  margin-top: -70px;
+}
+.fontminecraft{
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  font-family: 'a';
+  font-size: 50;
+  margin-bottom: -50px;
+}
 .App-logo {
-  height: 40vmin;
-  margin-top: -10%;
+  height: 20vmin;
+  margin-top: -5%;
   pointer-events: none;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -26,10 +61,9 @@
   color: #1d1d1d;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  
+
 }
 .ps{
-  
   letter-spacing: -8px;
   font-family: 'a';
   font-size: 100%;
@@ -43,6 +77,11 @@
   
 }
 
+
+.ps:focus{
+  color: #161717;
+  background-color: #767a83;
+}
 
 .Box:focus{
   color: #161717;
@@ -100,4 +139,4 @@
             filter: blur(0px);
     opacity: 1;
   }
-} */
+}
