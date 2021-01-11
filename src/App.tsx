@@ -17,7 +17,6 @@ import './App.css';
   }
   return (
     <div className="App">
-      
       <header  className="css-selector">
         
         <img src={logo}  className="App-logo" alt="logo" />
@@ -28,7 +27,7 @@ import './App.css';
           먼저 로그인부터 해줄래?
         </p>
 
-        <div className="block">
+        <div className="block"></div>
           
           <p style={minecraft} className="fontminecraft" >
             Minecraft 계정
@@ -55,7 +54,7 @@ import './App.css';
                 <input style={complete} type="button" name="complete" value="로그인" className="complete"/>
               </p>
             </p>
-           </div>
+
           
           
 

@@ -4,9 +4,8 @@ var electron_1 = require("electron");
 var isDev = require("electron-is-dev");
 var path = require("path");
 // 1. GC가 일어나지 않도록 밖에 빼줌
-var main_window;
 function create_window() {
-    main_window = new electron_1.BrowserWindow({
+    var main_window = new electron_1.BrowserWindow({
         // 이것들은 제가 사용하는 설정이니 각자 알아서 설정 하십시오.
         center: true,
         width: 1450,
@@ -18,6 +17,9 @@ function create_window() {
         backgroundColor: '#f279be',
         minHeight: 640,
         minWidth: 1200,
+        titleBarStyle: 'hidden',
+        frame: false,
+        show: false,
         webPreferences: {
             // 2.
             // 웹 애플리케이션을 데스크탑으로 모양만 바꾸려면 안 해도 되지만,
@@ -25,6 +27,9 @@ function create_window() {
             // true 해야 합니다.
             nodeIntegration: true
         }
+    });
+    main_window.once('ready-to-show', function () {
+        main_window.show();
     });
     // 3. and load the index.html of the app.
     if (isDev) {
@@ -37,9 +42,6 @@ function create_window() {
         main_window.loadFile(path.join(__dirname, './build/index.html'));
     }
     // Emitted when the window is closed.
-    main_window.on('closed', function () {
-        main_window = null;
-    });
 }
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
