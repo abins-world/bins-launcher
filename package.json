@@ -60,6 +60,8 @@
     "react-dev-utils": "^11.0.1",
     "react-dom": "^17.0.1",
     "react-refresh": "^0.8.3",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "resolve": "1.18.1",
     "resolve-url-loader": "^3.1.2",
     "sass-loader": "8.0.2",
@@ -102,6 +104,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.7",
     "concurrently": "^5.3.0",
     "cross-env": "^7.0.3",
     "electron": "^11.1.1",
