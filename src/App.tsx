@@ -10,7 +10,7 @@ import './App.css';
     padding: "0px 0px 20px 0px"
   }
   const complete={
-    padding: "2px 100px 2px 100px"
+    padding: "8px 120px 8px 120px"
   }
   const minecraft={
     padding: "20px 0px 0px 0px"
@@ -28,8 +28,6 @@ import './App.css';
           먼저 로그인부터 해줄래?
         </p>
 
-
-        <br></br>
 
 
         <p style={minecraft} className="fontminecraft" >

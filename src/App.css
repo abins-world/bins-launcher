@@ -1,6 +1,39 @@
-.App {
-  text-align: center;
+
+
+.App{
+  background-image: url('./icon/background.png');
+	-webkit-animation: App 8s both;
+	        animation: App 8s both;
 }
+@-webkit-keyframes App {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes App {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .passwordlink:link {text-decoration: none; color: #605b7f;}
 .passwordlink:visited {text-decoration: none; color: #605b7f;}
 .passwordlink:active {text-decoration: none; color: #605b7f;}
@@ -33,16 +66,21 @@
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   margin-top: 0%;
-  color: #285655;
+  color: #e3b5c7;
   font-family: 'a';
-  background-color: #78a3a2;
-  border:#78a3a2;
+  background-color: #903f5f;
+  border:#903f5f;
   border-radius: 5px 5px 5px 5px;
   outline:none;
 }
 .complete:hover{
-	background: #036261;
+	background: #7f1f45;
 	cursor: pointer;
+}
+
+
+.complete:active{
+  background: #a9416a;
 }
 .password{
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -74,6 +112,7 @@
   border:#454850;
   border-radius: 10px 10px 10px 10px;
   outline:none;
+  text-align: center;
   color: #1d1d1d;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -85,6 +124,7 @@
   font-size: 100%;
   background-color: #454850;
   border:#454850;
+  text-align: center;
   border-radius: 10px 10px 10px 10px;
   outline:none;
   color: #1d1d1d;

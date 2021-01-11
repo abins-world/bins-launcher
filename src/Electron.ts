@@ -13,7 +13,7 @@ function create_window() {
     height: 850,
     autoHideMenuBar: true,
     kiosk: !isDev,
-    icon: path.join(__dirname, "./icon/icon.ico"),
+    icon: path.join(__dirname, "./icon/icon.png"),
     resizable: true,
     backgroundColor: '#282c34',
     webPreferences: {
