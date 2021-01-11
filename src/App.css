@@ -28,6 +28,22 @@
   font-family: 'a';
   font-size: 50%;
 }
+
+.complete{
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  margin-top: 0%;
+  color: #285655;
+  font-family: 'a';
+  background-color: #78a3a2;
+  border:#78a3a2;
+  border-radius: 5px 5px 5px 5px;
+  outline:none;
+}
+.complete:hover{
+	background: #036261;
+	cursor: pointer;
+}
 .password{
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;

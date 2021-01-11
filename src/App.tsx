@@ -9,6 +9,12 @@ import './App.css';
   const passworld={
     padding: "0px 0px 20px 0px"
   }
+  const complete={
+    padding: "2px 100px 2px 100px"
+  }
+  const minecraft={
+    padding: "20px 0px 0px 0px"
+  }
   return (
     <div className="App">
       
@@ -26,7 +32,7 @@ import './App.css';
         <br></br>
 
 
-        <p  className="fontminecraft" >
+        <p style={minecraft} className="fontminecraft" >
           Minecraft 계정
         </p>
 
@@ -35,21 +41,25 @@ import './App.css';
             이메일
           </p>
           <input type="text"  className="Box"/>
-          </p>
+        </p>
         
 
         
           <p style={id} className="password">
             비밀번호
           </p>
+
+
+
           <p style={passworld} className="font" >
-          <input type="password"  className="ps"/>
+            <input type="password"  className="ps"/>
+            <p>
+              <input style={complete} type="button" name="complete" value="로그인" className="complete"/>
+            </p>
           </p>
 
-
-          <p>
-          <input type="password"  className="ps"/>
-          </p>
+          
+          
 
           <a
           className="passwordlink"
