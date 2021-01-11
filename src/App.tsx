@@ -60,7 +60,7 @@ class App extends Component<{}, State> {
         
           <img src={logo}  className={styles.logo} alt="logo" />
           <p className={styles.font}>
-            어빈월드에 온걸 환영해!
+            어빈월드에 온 걸 환영해!
             
             먼저 로그인부터 해줄래?
           </p>
