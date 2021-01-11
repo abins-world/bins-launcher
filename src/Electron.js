@@ -9,13 +9,15 @@ function create_window() {
     main_window = new electron_1.BrowserWindow({
         // 이것들은 제가 사용하는 설정이니 각자 알아서 설정 하십시오.
         center: true,
-        width: 1750,
-        height: 850,
+        width: 1450,
+        height: 800,
         autoHideMenuBar: true,
         kiosk: !isDev,
         icon: path.join(__dirname, "./icon/icon.png"),
         resizable: true,
         backgroundColor: '#f279be',
+        minHeight: 640,
+        minWidth: 1200,
         webPreferences: {
             // 2.
             // 웹 애플리케이션을 데스크탑으로 모양만 바꾸려면 안 해도 되지만,

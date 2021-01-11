@@ -42,12 +42,14 @@
   position: relative; top: 10px;
 }
 .block{
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
   background-color: #2d2d31;
   width : 40%;
   
   border-radius: 20px;
-  height: 50%;
-}
+  height: 50%;}
 .complete{
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -57,10 +59,10 @@
   outline:none;
   text-align: center;
   font-family: 'a';
-  background-color: #903f5f;
-  border:#903f5f;
+  background-color: #8d3156;
+  border:#8d3156;
   border-radius: 5px 5px 5px 5px;
-  box-shadow: 0 4px 16px #1a1b1f;
+  box-shadow: 0 4px 16px #19191a;
 
   
   position: relative; top: 50px;
@@ -90,29 +92,34 @@
   margin-bottom: -50px;
 }
 .App-logo {
-  height: 20vmin;
-  margin-top: -5%;
-  pointer-events: none;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
+  height: 20vmin;
+  margin-top: -5%;
+  pointer-events: none;
+
 }
 .Box{
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
   font-family: 'a';
   font-size: 100%;
   background-color: #454850;
   border:#454850;
   
-  box-shadow: 0 4px 16px #1a1b1f;
+  box-shadow: 0 4px 16px #19191a;
   border-radius: 10px 10px 10px 10px;
   outline:none;
   text-align: center;
   color: #1d1d1d;
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
 }
 .ps{
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  
   letter-spacing: -8px;
   font-family: 'a';
   font-size: 100%;
@@ -120,13 +127,11 @@
   border:#454850;
   text-align: center;
   
-  box-shadow: 0 4px 16px #1a1b1f;
+  box-shadow: 0 4px 16px #19191a;
   border-radius: 10px 10px 10px 10px;
   outline:none;
   color: #1d1d1d;
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  
+
 }
 
 
@@ -179,9 +184,9 @@
   background: linear-gradient(145deg, #f56387, #f083d8, #f58ede, #d4417e);
   background-size: 800% 800%;
 
-  -webkit-animation: AnimationName 5s ease infinite;
-  -moz-animation: AnimationName 5s ease infinite;
-  animation: AnimationName 5s ease infinite;
+  -webkit-animation: AnimationName 7s ease infinite;
+  -moz-animation: AnimationName 7s ease infinite;
+  animation: AnimationName 7s ease infinite;
 
 
 
