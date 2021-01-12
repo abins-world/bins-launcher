@@ -19,7 +19,7 @@ class Authenticator {
                     },
                     username: email,
                     password: pw,
-                    requestUser: false
+                    requestUser: true
                 }
             )
 

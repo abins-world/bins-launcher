@@ -97,10 +97,15 @@
       "node_modules/",
       "build/",
       "src/",
+      "build/static",
+      "build/static/css",
+      "build/static/js",
+      "build/static/media",
       "!node_modules/.cache/",
       "!**/*.map"
     ]
   },
+  "homepage":"./",
   "eslintConfig": {
     "extends": [
       "react-app",
