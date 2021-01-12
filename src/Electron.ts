@@ -10,8 +10,8 @@ function create_window() {
   let main_window = new BrowserWindow({
     // 이것들은 제가 사용하는 설정이니 각자 알아서 설정 하십시오.
     center: true,
-    width: 1450,
-    height: 800,
+    width: 1200,
+    height: 640,
     autoHideMenuBar: true,
     kiosk: !isDev,
     icon: path.join(__dirname, '/icon/icon.png'),
@@ -19,6 +19,8 @@ function create_window() {
     backgroundColor: '#f279be',
     minHeight: 640,
     minWidth: 1200,
+    maxHeight: 640,
+    maxWidth: 1200,
     titleBarStyle: 'hidden',
     frame: false,
     show: false,
