@@ -1,0 +1,6 @@
+.Drag{
+    -webkit-app-region: drag;
+    background-color: #242424;
+    width: 100%;
+    height: 30px;
+  }
