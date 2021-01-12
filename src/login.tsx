@@ -10,7 +10,7 @@ interface State {
   password: String
 }
 
-class App extends Component<{}, State> {
+class Login extends Component<{}, State> {
 
   buttonRef: React.RefObject<HTMLInputElement>
 
@@ -119,4 +119,4 @@ class App extends Component<{}, State> {
   }
 }
 
-// export default App;
+export default Login;
