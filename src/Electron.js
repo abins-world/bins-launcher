@@ -41,7 +41,7 @@ function create_window() {
     }
     else {
         // 프로덕션 환경에서는 패키지 내부 리소스에 접근
-        main_window.loadFile(path.join(__dirname, './build/index.html'));
+        main_window.loadFile(path.join(__dirname, '../build/index.html'));
     }
     // Emitted when the window is closed.
 }

@@ -1,4 +1,12 @@
 directories:
   output: dist
   buildResources: build
+files:
+  - filter:
+      - scripts/
+      - node_modules/
+      - build/
+      - src/
+      - '!node_modules/.cache/'
+      - '!**/*.map'
 electronVersion: 11.1.1
