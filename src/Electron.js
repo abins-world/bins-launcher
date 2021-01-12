@@ -20,8 +20,8 @@ function create_window() {
         maxHeight: 640,
         maxWidth: 1200,
         titleBarStyle: 'hidden',
-        frame: false,
         show: false,
+        frame: false,
         webPreferences: {
             // 2.
             // 웹 애플리케이션을 데스크탑으로 모양만 바꾸려면 안 해도 되지만,

@@ -34,7 +34,7 @@
   z-index: 2;
 
   border-radius: 8px 8px 8px 8px;
-  box-shadow: 0 4px 16px #1d1d1d;
+  box-shadow: 0 4px 16px #1b1b1b;
 
 
 }
@@ -44,11 +44,36 @@
 }
 .play:active{
   
-  box-shadow: 0 4px 16px #141414;
-  background: #a9416a;
+	background: #991f50;
+  box-shadow: none;
 }
+.github{
+  z-index: 5;
+  background: url( "./icon/github.svg" ) no-repeat;
+  background-size: contain;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+  top: 200px;
 
+}
+.option{
+  z-index: 5;
+  background: url( "./icon/option.svg" ) no-repeat;
+  background-size: contain;
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  top: 610px;
+  left: 1000px;
 
+}
 .state{
    
   z-index: 1;
@@ -61,6 +86,13 @@
   width : 1200px;
   height: 120px;
 }
+.state img{
+  position: relative;
+  top: 45px;
+  left: 390px;
+}
+
+
 
 .servers{
   z-index: 3;
