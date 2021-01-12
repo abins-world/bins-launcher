@@ -4,6 +4,7 @@ import logo from './icon/Abins-world.png';
 
 
 import styles from './App.module.css';
+import Authenticator from './util/Authenticate';
 
 interface State {
   email: String,
@@ -12,7 +13,7 @@ interface State {
 
 class Login extends Component<{}, State> {
 
-  buttonRef: React.RefObject<HTMLInputElement>
+  buttonRef: any
 
   constructor (props: any){
     super(props);
@@ -20,8 +21,7 @@ class Login extends Component<{}, State> {
       email: '',
       password: ''
     }
-
-    this.buttonRef = React.createRef();
+    this.buttonRef = []
     this.onEmailChange = this.onEmailChange.bind(this)
     this.onPasswordChange = this.onEmailChange.bind(this)
   }
@@ -88,8 +88,16 @@ class Login extends Component<{}, State> {
               <p style={passworld} className={styles.font} >
                 <input type="password"  className={styles.ps}/>
                 <p>
-                  <input style={complete} type="button" name="complete" value="로그인" className={styles.complete} ref={this.buttonRef} onClick={(event) => {
-                    
+                  <input style={complete} type="button" name="complete" value="로그인" className={styles.complete} ref={a => this.buttonRef[0] = a} onClick={(event) => {
+                    this.buttonRef[0].value = '잠깐만요..'
+                    this.buttonRef[0].className = styles['login-in-progress']
+                    this.buttonRef[0].disabled = true
+
+                    let auth: Authenticator = new Authenticator()
+                    auth.authenticate(this.state.email, this.state.password).then((b) => {
+                      if(!b)
+                        alert('비밀번호 또는 아이디가 틀렸습니다.')
+                    })
                   }}/>
                 </p>
               </p>
