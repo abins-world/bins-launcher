@@ -59,7 +59,7 @@ class App extends Component<{}, State> {
         <header className={styles.css}>
         
           <img src={logo}  className={styles.logo} alt="logo" />
-          <p className={styles.font}>
+          <p className={[styles.font, styles.hello].join(' ')}>
             어빈월드에 온 걸 환영해!
             
             먼저 로그인부터 해줄래?

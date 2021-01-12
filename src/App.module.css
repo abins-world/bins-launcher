@@ -39,9 +39,12 @@
   -webkit-app-region: drag;
   background-color: #242424;
   width: 100%;
-  height: 20px;
+  height: 30px;
 }
-
+.hello{
+  
+  text-shadow: 0 4px 16px #19191a;
+}
 
 
 .passwordlink:link {text-decoration: none; color: #605b7f;}
@@ -50,8 +53,7 @@
 .passwordlink:hover {text-decoration: underline; color: #7965f3;}
 
 .passwordlink{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
   font-size: 50%;
   font-family: 'a';
   padding-left: 0;
@@ -59,24 +61,21 @@
 }
 
 .font{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
   font-family: 'a';
   
   margin-top: 3px;
   font-size: 50;
 }
 .email{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
   font-family: 'a';
   font-size: 50%;
   
   position: relative; top: 10px;
 }
 .block{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
 
   background-color: #2d2d31;
   width : 40%;
@@ -89,8 +88,7 @@
   color: #e3b5c7;
 }
 .complete{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
   margin-top: 0%;
   color: #ffffff;
   
@@ -100,7 +98,7 @@
   background-color: #8d3156;
   border:#8d3156;
   border-radius: 5px 5px 5px 5px;
-  box-shadow: 0 4px 16px #19191a;
+  box-shadow: 0 4px 16px #1d1d1d;
 
   
   position: relative; top: 50px;
@@ -110,11 +108,12 @@
 	cursor: pointer;
 }
 .complete:active{
+  
+  box-shadow: 0 4px 16px #454850;
   background: #a9416a;
 }
 .password{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
   font-family: 'a';
   font-size: 50%;
   margin-top: -70px;
@@ -122,16 +121,14 @@
   
 }
 .minecraft{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
   font-family: 'a';
   font-size: 50;
   
   position: relative; top: -80px;
 }
 .logo {
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
 
   height: 20vmin;
   margin-top: -5%;
@@ -139,15 +136,14 @@
 
 }
 .Box{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
 
   font-family: 'a';
   font-size: 100%;
   background-color: #454850;
   border:#454850;
   
-  box-shadow: 0 4px 16px #19191a;
+  box-shadow: 0 4px 16px #1d1d1d;
   border-radius: 10px 10px 10px 10px;
   outline:none;
   text-align: center;
@@ -155,8 +151,7 @@
 
 }
 .ps{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
   
   letter-spacing: -8px;
   font-family: 'a';
@@ -165,7 +160,7 @@
   border:#454850;
   text-align: center;
   
-  box-shadow: 0 4px 16px #19191a;
+  box-shadow: 0 4px 16px #1d1d1d;
   border-radius: 10px 10px 10px 10px;
   outline:none;
   color: #1d1d1d;
@@ -193,8 +188,7 @@
 
 
 .App{
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
 
   background-color: #f279be;
   text-align: center;
@@ -218,8 +212,7 @@
 }
 
 .css {
-  -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+   
   
   background: linear-gradient(145deg, #f56387, #f083d8, #f58ede, #d4417e);
   background-size: 800% 800%;
