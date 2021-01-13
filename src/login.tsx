@@ -24,7 +24,7 @@ class Login extends Component<{}, State> {
     }
     this.buttonRef = []
     this.onEmailChange = this.onEmailChange.bind(this)
-    this.onPasswordChange = this.onEmailChange.bind(this)
+    this.onPasswordChange = this.onPasswordChange.bind(this)
   }
 
   onEmailChange (event: ChangeEvent<HTMLInputElement>) {
