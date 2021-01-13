@@ -74,7 +74,7 @@ class Login extends Component<{}, State> {
               <p className={[styles.email, styles.i].join(' ')} >
                 이메일
               </p>
-              <input type="text" className={styles.Box}/>
+              <input type="text" className={styles.Box} onChange={this.onEmailChange}/>
             </p>
             
 
@@ -86,7 +86,7 @@ class Login extends Component<{}, State> {
 
 
               <p style={passworld} className={styles.font} >
-                <input type="password"  className={styles.ps}/>
+                <input type="password"  className={styles.ps} onChange={this.onPasswordChange}/>
                 <p>
                   <input style={complete} type="button" name="complete" value="로그인" className={styles.complete} ref={a => this.buttonRef[0] = a} onClick={(event) => {
                     this.buttonRef[0].value = '잠깐만요..'
