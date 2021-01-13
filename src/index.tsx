@@ -5,13 +5,23 @@ import App from './main';
 import Login from './login';
 import reportWebVitals from './reportWebVitals';
 import {HashRouter, Route} from 'react-router-dom'
+import {Provider} from 'react-redux'
+import { applyMiddleware, compose, createStore } from 'redux';
+import promise from 'redux-promise'
+import rootReducer from './reducers/rootReducer';
+
+let store = createStore(rootReducer, compose(
+  applyMiddleware(promise)
+));
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
-      <Route exact path="/" component={Login}/>
-      <Route path="/main" compoennt={App}/>
-    </HashRouter>
+    <Provider store={store}>
+      <HashRouter>
+        <Route exact path="/" component={Login}/>
+        <Route path="/main" compoennt={App}/>
+      </HashRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
