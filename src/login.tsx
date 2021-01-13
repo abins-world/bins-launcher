@@ -5,6 +5,7 @@ import logo from './icon/Abins-world.png';
 
 import styles from './App.module.css';
 import Authenticator from './util/Authenticate';
+import { Link } from 'react-router-dom';
 
 interface State {
   email: String,
@@ -54,9 +55,8 @@ class Login extends Component<{}, State> {
 
     return (
       <div className={styles.App}>
-        
+        <Link to="/main">개발자모드: 로그인 우회</Link>
         <header className={styles.css}>
-        
           <img src={logo}  className={styles.logo} alt="logo" />
           <p className={[styles.font, styles.hello].join(' ')}>
             어빈월드에 온 걸 환영해!
@@ -94,6 +94,7 @@ class Login extends Component<{}, State> {
                     this.buttonRef[0].disabled = true
 
                     let auth: Authenticator = new Authenticator()
+                    console.log(`Email: ${this.state.email}, Password: ${this.state.password}`)
                     auth.authenticate(this.state.email, this.state.password).then((b) => {
                       if(!b) {
                         alert('비밀번호 또는 아이디가 틀렸습니다.')
