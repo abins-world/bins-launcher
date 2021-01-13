@@ -78,10 +78,19 @@
   box-shadow: 0 4px 16px #1b1b1b;
   z-index: 6;
   
-  width: 230px;
-  height: 80px;
+  width: 210px;
+  height: 70px;
   position: relative;
   top: 200px;
+  left: 25px;
+
+  transition: width 0.1s, height 0.1s;
+}
+
+.ckd:hover{
+  width: 230px;
+  height: 80px;
+  top: 202.5px;
   left: 25px;
 }
 
@@ -101,13 +110,14 @@
   position: fixed;
   top: 30px;
   left: 250px;
-  width: 955px;
-  height: 492px;
+  width: 935px;
+  height: 482px;
   
 }
 .option{
   z-index: 5;
   background: url( "./icon/option.svg" ) no-repeat;
+  fill:rgb(42,169,224);
   background-size: contain;
   border: none;
   outline: none;
