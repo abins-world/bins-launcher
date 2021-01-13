@@ -6,7 +6,7 @@ files:
       - scripts/
       - node_modules/
       - build/
-      - src/
+      - bootstraper/
       - build/static
       - build/static/css
       - build/static/js
