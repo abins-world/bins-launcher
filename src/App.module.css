@@ -83,6 +83,18 @@
 }
 .login-in-progress{
   color: #e3b5c7;
+  margin-top: 0%;
+  
+  outline:none;
+  text-align: center;
+  font-family: 'a';
+  background-color: #8d3156;
+  border:#8d3156;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 4px 16px #1d1d1d;
+
+  
+  position: relative; top: 50px;
 }
 .complete{
    

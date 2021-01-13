@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './main';
-import Login from './login';
 import reportWebVitals from './reportWebVitals';
 import {HashRouter, Route} from 'react-router-dom'
 import {Provider} from 'react-redux'
@@ -18,8 +17,8 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <HashRouter>
-        <Route exact path="/" component={Login}/>
-        <Route path="/main" compoennt={App}/>
+        <Route exact path="/" compoennt={App}/>
+        <App/>
       </HashRouter>
     </Provider>
   </React.StrictMode>,
