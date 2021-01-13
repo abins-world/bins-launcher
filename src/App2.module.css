@@ -48,7 +48,7 @@
   box-shadow: none;
 }
 .github{
-  z-index: 5;
+  z-index: 7;
   background: url( "./icon/github.svg" ) no-repeat;
   background-size: contain;
   border: none;
@@ -60,6 +60,51 @@
   top: 200px;
 
 }
+
+
+.ckd{
+  
+  border: none;
+  outline: none;
+  text-align: center;
+  background-color: #272323;
+  background: url( "./icon/CKD.png" ) no-repeat;
+  background-size: 105%;
+
+  cursor: pointer;
+  position: relative;
+  border:#441a1a;
+  border-radius: 18px 18px 18px 18px;
+  box-shadow: 0 4px 16px #1b1b1b;
+  z-index: 6;
+  
+  width: 230px;
+  height: 80px;
+  position: relative;
+  top: 200px;
+  left: 25px;
+}
+
+.ckd:active{
+  position: relative;
+  top: 202.5px;
+  left: 25px;
+  width: 225px;
+  height: 75px;
+  
+}
+.ckdlogo{
+  z-index: 1;
+  
+  border: none;
+  outline: none;
+  position: fixed;
+  top: 30px;
+  left: 250px;
+  width: 955px;
+  height: 492px;
+  
+}
 .option{
   z-index: 5;
   background: url( "./icon/option.svg" ) no-repeat;
@@ -69,9 +114,9 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  position: relative;
-  top: 610px;
-  left: 1000px;
+  position: fixed;
+  top: 560px;
+  left: 1100px;
 
 }
 .state{
@@ -82,14 +127,10 @@
   box-shadow: 0 4px 16px #121213;
   
   position: relative;
+  left: 50px;
   top: 730px;
   width : 1200px;
   height: 120px;
-}
-.state img{
-  position: relative;
-  top: 45px;
-  left: 390px;
 }
 
 
@@ -101,7 +142,7 @@
   position: relative;
   top: -260px;
   right: 500px;
-  width : 200px;
+  width : 300px;
   height: 1200px;
 }
 
@@ -109,7 +150,7 @@
   z-index: 5;
   font-size: 70%;
   position: relative;
-  right: 500px;
+  right: 475px;
   
   text-shadow: 0 4px 16px #121213;
   top: 20px;
@@ -164,3 +205,37 @@
 	50%{background-position:97% 100%}
 	100%{background-position:4% 0%}
   }
+
+  @-webkit-keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  

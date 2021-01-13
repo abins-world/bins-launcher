@@ -1,4 +1,6 @@
 import React from 'react';
+import ckd from './icon/CKD.png'
+import ckdlogo from './icon/CKDtitle.png'
 import styles from './App2.module.css';
 
 
@@ -14,17 +16,20 @@ function App () {
                 <div className={styles.servers}>
                     <div className={styles.state}>
                         <input style={play}className={styles.play} type="button" name="play" value="플레이"></input>
-                    
+
+                    </div>
+                    <div>
+                        <input className={styles.ckd} type="button" name="ckd" value=""></input>
                     </div>
                     
-                    <input style={play}className={styles.play} type="button" name="play" value="플레이"></input>
+                    <img src={ckdlogo} alt="ckd" className={styles.ckdlogo}></img>
                     {/* <a 
                     href="https://github.com/A-Bins/bins-launcher"
                     target="_blank"
                     rel="noopener noreferrer">
                         <input className={styles.github} type="button" name="github" value=""></input>
                     </a> */}
-                        <input className={styles.option} type="button" name="option" value=""></input>
+                    <input className={styles.option} type="button" name="option" value=""></input>
 
                 </div>
             </header>
