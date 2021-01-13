@@ -1,8 +1,6 @@
 import { app, BrowserWindow } from 'electron'
 import * as isDev from 'electron-is-dev'
-import { url } from 'inspector'
 import * as path from 'path'
-import { exit } from 'process'
 
 // 1. GC가 일어나지 않도록 밖에 빼줌
 function create_window() {

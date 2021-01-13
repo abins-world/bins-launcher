@@ -88,15 +88,15 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "electron:start": "tsc src/Electron && concurrently \"cross-env BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron:build": "tsc src/Electron && npm run build && electron-builder build --win portable"
+    "electron:start": "tsc bootstraper/Electron && concurrently \"cross-env BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "tsc bootstraper/Electron && npm run build && electron-builder build --win portable"
   },
   "build": {
     "files": [
       "scripts/",
       "node_modules/",
       "build/",
-      "src/",
+      "bootstraper/",
       "build/static",
       "build/static/css",
       "build/static/js",
