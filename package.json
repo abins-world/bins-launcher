@@ -105,7 +105,7 @@
       "!**/*.map"
     ]
   },
-  "homepage":"./",
+  "homepage": "./",
   "eslintConfig": {
     "extends": [
       "react-app",

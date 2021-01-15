@@ -1,5 +1,4 @@
 import React from 'react';
-import ckd from './icon/CKD.png'
 import ckdlogo from './icon/CKDtitle.png'
 import styles from './App2.module.css';
 
@@ -29,10 +28,13 @@ function App () {
                     rel="noopener noreferrer">
                         <input className={styles.github} type="button" name="github" value=""></input>
                     </a> */}
-                    <input className={styles.option} type="button" name="option" value=""></input>
-
+                    <div className={styles.options}>
+                        <span className={styles.optiontip}>설정</span>
+                        <input className={styles.option} type="button" name="option" value=""></input>
+                    </div>
                 </div>
             </header>
+
         </div>
     
     )
