@@ -30,8 +30,6 @@ class Authenticator {
 
             ok = true
             this.userInfo = response.data
-            console.log('[Auth] UserInfo')
-            console.log(this.userInfo)
         } catch(err) {
             if(err.response.status === 403) {
                 ok = false
