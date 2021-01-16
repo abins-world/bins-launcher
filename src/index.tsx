@@ -9,6 +9,7 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import promise from 'redux-promise'
 import rootReducer from './reducers/rootReducer';
 import Login from './login';
+import Option from './option';
 
 let store = createStore(rootReducer, compose(
   applyMiddleware(promise)
@@ -20,6 +21,7 @@ ReactDOM.render(
       <HashRouter>
         <Route exact path="/" component={Login}/>
         <Route path="/main" component={App}/>
+        <Route path="/option" component={Option}/>
       </HashRouter>
     </Provider>
   </React.StrictMode>,

@@ -114,7 +114,7 @@
   height: 492px;
   
 }
-div.options span.optiontip::after{
+div.options span#optiontip::after{
 
 	content: "";
 	position: absolute;
@@ -124,10 +124,11 @@ div.options span.optiontip::after{
 	border-width: 7px;
 	border-style: solid;
 	border-color: #1a1a1a transparent transparent transparent;
-
 }
-div.options span.optiontip{
-  visibility: hidden;
+
+
+
+div.options span#optiontip{
   z-index: 200;
   position: relative;
   background: #1a1a1a;
@@ -142,20 +143,12 @@ div.options span.optiontip{
   border-radius: 5px;
   top: 520px;
   left: 1020px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.optiontitle{
-  background: #161618;
-  position: relative;
-  top: 500px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 80%;
-}
 
-.option{
+#option{
   z-index: 5;
   background: url( "./icon/option.svg" ) no-repeat;
   background-size: 80%;
@@ -170,31 +163,23 @@ div.options span.optiontip{
   left: 1095px;
 
 }
-div.options input.option:hover span.optiontip{
-  visibility: visible;
-}
-.option:hover{
+div.options:hover > span#optiontip{
+  opacity: 1;
   
+  
+}
+#option:hover{
   border-radius: 12px 12px 12px 12px;
   background-color: #4d4d4d;
 }
-div.options:active div.title span.optiontitle{
+
+
+
+div.title:active span.optiontitle{
   visibility: visible;
 }
 
-.optiontitle{
-  visibility: hidden;
-  z-index: 50; 
-  position: absolute;
-  left: 0px;
-  top: 230px;
-  padding-top: 50px;
-  width: 1200px;
-  height: 600px;
-  z-index: 100;
-  background: #2d2d31;
-  
-}
+
 .state{
    
   z-index: 1;
