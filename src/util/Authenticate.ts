@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+axios.defaults.withCredentials = false
+
 class Authenticator {
 
     userInfo: any

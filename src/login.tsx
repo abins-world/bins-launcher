@@ -12,7 +12,7 @@ interface State {
   password: String
 }
 
-class Login extends Component<{}, State> {
+class Login extends Component<{history: }, State> {
 
   buttonRef: any
 
@@ -101,6 +101,8 @@ class Login extends Component<{}, State> {
                         this.buttonRef[0].value = '로그인'
                         this.buttonRef[0].className = styles.complete
                         this.buttonRef[0].disabled = false
+                      } else {
+                        this.props.historey
                       }
                     })
                   }}/>
