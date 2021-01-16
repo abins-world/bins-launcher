@@ -128,7 +128,7 @@ div.options span.optiontip::after{
 }
 div.options span.optiontip{
   visibility: hidden;
-  z-index: 10;
+  z-index: 200;
   position: relative;
   background: #1a1a1a;
   color: #c4c4c4;
@@ -143,9 +143,18 @@ div.options span.optiontip{
   top: 520px;
   left: 1020px;
 }
-div.options:hover span.optiontip {
-  visibility: visible;
+
+.optiontitle{
+  background: #161618;
+  position: relative;
+  top: 500px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 80%;
 }
+
 .option{
   z-index: 5;
   background: url( "./icon/option.svg" ) no-repeat;
@@ -161,11 +170,30 @@ div.options:hover span.optiontip {
   left: 1095px;
 
 }
-
+div.options input.option:hover span.optiontip{
+  visibility: visible;
+}
 .option:hover{
   
   border-radius: 12px 12px 12px 12px;
   background-color: #4d4d4d;
+}
+div.options:active div.title span.optiontitle{
+  visibility: visible;
+}
+
+.optiontitle{
+  visibility: hidden;
+  z-index: 50; 
+  position: absolute;
+  left: 0px;
+  top: 230px;
+  padding-top: 50px;
+  width: 1200px;
+  height: 600px;
+  z-index: 100;
+  background: #2d2d31;
+  
 }
 .state{
    
@@ -195,7 +223,7 @@ div.options:hover span.optiontip {
 }
 
 .serversTitle{
-  z-index: 5;
+  z-index: 4;
   font-size: 70%;
   position: relative;
   right: 475px;

@@ -8,10 +8,16 @@ function App () {
         padding: "10px 120px 10px 120px"
     }
     return(
+
+
+
         <div className={styles.default}>
+            
             <header className={styles.App}>
-                    
-            <div className={styles.serversTitle}>서버 목록</div>
+
+            <div className={styles.serversTitle}>
+                서버 목록
+            </div>
                 <div className={styles.servers}>
                     <div className={styles.state}>
                         <input style={play}className={styles.play} type="button" name="play" value="플레이"></input>
@@ -28,14 +34,24 @@ function App () {
                     rel="noopener noreferrer">
                         <input className={styles.github} type="button" name="github" value=""></input>
                     </a> */}
-                    <div className={styles.options}>
-                        <span className={styles.optiontip}>설정</span>
-                        <input className={styles.option} type="button" name="option" value=""></input>
-                    </div>
+                    
+                        <div className={styles.options}>
+                            
+                            <input className={styles.option} type="button" name="option" value=""></input>
+                            <span className={styles.optiontip}>설정</span>
+                            <div className={styles.title}>
+                                <span className={styles.optiontitle}>설정</span>
+                            </div>
+                        </div>
+                        
+                    
                 </div>
+        
             </header>
 
+
         </div>
+
     
     )
 }

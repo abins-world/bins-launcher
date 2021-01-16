@@ -19,7 +19,6 @@ function create_window() {
         minWidth: 1200,
         maxHeight: 640,
         maxWidth: 1200,
-        titleBarStyle: 'hidden',
         show: false,
         frame: false,
         webPreferences: {
