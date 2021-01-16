@@ -6,13 +6,14 @@ import logo from './icon/Abins-world.png';
 import styles from './App.module.css';
 import Authenticator from './util/Authenticate';
 import { Link } from 'react-router-dom';
+import { HashHistory } from 'history';
 
 interface State {
   email: String,
   password: String
 }
 
-class Login extends Component<{history: }, State> {
+class Login extends Component<{history: HashHistory}, State> {
 
   buttonRef: any
 
@@ -102,7 +103,7 @@ class Login extends Component<{history: }, State> {
                         this.buttonRef[0].className = styles.complete
                         this.buttonRef[0].disabled = false
                       } else {
-                        this.props.historey
+                        this.props.history.push('/main')
                       }
                     })
                   }}/>

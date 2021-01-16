@@ -22,6 +22,9 @@ class Authenticator {
                     username: email,
                     password: pw,
                     requestUser: true
+                },
+                {
+                  withCredentials: false
                 }
             )
 
