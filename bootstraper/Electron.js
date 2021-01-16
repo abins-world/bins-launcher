@@ -26,7 +26,8 @@ function create_window() {
             // 웹 애플리케이션을 데스크탑으로 모양만 바꾸려면 안 해도 되지만,
             // Node 환경처럼 사용하려면 (Node에서 제공되는 빌트인 패키지 사용 포함)
             // true 해야 합니다.
-            nodeIntegration: true
+            nodeIntegration: true,
+            webSecurity: false
         }
     });
     main_window.once('ready-to-show', function () {
