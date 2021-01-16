@@ -40,6 +40,7 @@ function App () {
                             <input className={styles.option} type="button" name="option" value=""></input>
                             <span className={styles.optiontip}>설정</span>
                             <div className={styles.title}>
+                                <span className={styles.optiontip}>설정</span>
                                 <span className={styles.optiontitle}>설정</span>
                             </div>
                         </div>
