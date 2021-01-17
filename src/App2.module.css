@@ -163,10 +163,8 @@ div.options span#optiontip{
   left: 1095px;
 
 }
-div.options:hover > span#optiontip{
+div.options input#option:hover ~ span#optiontip{
   opacity: 1;
-  
-  
 }
 #option:hover{
   border-radius: 12px 12px 12px 12px;

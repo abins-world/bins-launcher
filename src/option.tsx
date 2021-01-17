@@ -17,13 +17,13 @@ class Option extends Component<{history: any}> {
 
 
                     
-                        var name = document.getElementById("interfaceoption");
-                        alert(name)
+                        var name = document.getElementById("App3_interfaceoption__3Bi8x");
+                        
 
 
                 }}/>
 
-                <span id="interfaceoption" ref = "interface" >인터페이스</span>
+                <span id={styles.interfaceoption}  >인터페이스</span>
             </div>
         );
     }
