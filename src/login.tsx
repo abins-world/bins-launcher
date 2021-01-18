@@ -27,6 +27,7 @@ class Login extends Component<{history: any}, State> {
     this.onPasswordChange = this.onPasswordChange.bind(this)
   }
 
+
   onEmailChange (event: ChangeEvent<HTMLInputElement>) {
     this.setState({
       email: event.target.value,
@@ -42,7 +43,6 @@ class Login extends Component<{history: any}, State> {
   }
 
   render() {
-
     const passworld={
       padding: "0px 0px 20px 0px"
     }
@@ -52,8 +52,35 @@ class Login extends Component<{history: any}, State> {
     const minecraft={
       padding: "100px 0px 0px 0px"
     }
+    const login = () =>{
+      this.buttonRef[0].value = '잠깐만요..'
+      this.buttonRef[0].className = styles['login-in-progress']
+      this.buttonRef[0].disabled = true
+      let auth: Authenticator = new Authenticator()
+      auth.authenticate(this.state.email, this.state.password).then((b) => {
+        if(!b) {
+          this.buttonRef[0].value = '비밀번호 또는 이메일이 틀렸습니다'
+          this.buttonRef[0].className = styles.complete
+          this.buttonRef[0].disabled = false
 
+          setTimeout(() =>{
+            this.buttonRef[0].value = '로그인'
+          }, 2000);
+        } else {
+          this.props.history.push('/main')
+        }
+      })
+    }
+    window.onkeydown = function(e: KeyboardEvent){
+      if(!e){
+        return;
+      }
+      if(e.key === 'Enter'){
+        login()
+      }
+    };
     return (
+
       <div className={styles.App}>
         <Link to="/main">개발자모드: 로그인 우회</Link>
         <header className={styles.css}>
@@ -89,22 +116,7 @@ class Login extends Component<{history: any}, State> {
                 <input type="password"  className={styles.ps} onChange={this.onPasswordChange}/>
                 <p>
                   <input style={complete} type="button" name="complete" value="로그인" className={styles.complete} ref={a => this.buttonRef[0] = a} onClick={(event) => {
-                   
-                    this.buttonRef[0].value = '잠깐만요..'
-                    this.buttonRef[0].className = styles['login-in-progress']
-                    this.buttonRef[0].disabled = true
-
-                    let auth: Authenticator = new Authenticator()
-                    auth.authenticate(this.state.email, this.state.password).then((b) => {
-                      if(!b) {
-                        alert('비밀번호 또는 이메일이 틀렸습니다.')
-                        this.buttonRef[0].value = '로그인'
-                        this.buttonRef[0].className = styles.complete
-                        this.buttonRef[0].disabled = false
-                      } else {
-                        this.props.history.push('/main')
-                      }
-                    })
+                    login()
                   }}
                   
                   />
