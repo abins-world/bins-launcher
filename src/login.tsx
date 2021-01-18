@@ -96,7 +96,7 @@ class Login extends Component<{history: any}, State> {
                     let auth: Authenticator = new Authenticator()
                     auth.authenticate(this.state.email, this.state.password).then((b) => {
                       if(!b) {
-                        alert('비밀번호 또는 아이디가 틀렸습니다.')
+                        alert('비밀번호 또는 이메일이 틀렸습니다.')
                         this.buttonRef[0].value = '로그인'
                         this.buttonRef[0].className = styles.complete
                         this.buttonRef[0].disabled = false

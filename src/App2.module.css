@@ -229,10 +229,37 @@ div.title:active span.optiontitle{
   text-align: center;
 
 }
-
-.profile img {
-  margin-left: 20px;
+.profileTitle{
+  padding-left: 200px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  position: fixed;
+  top: 545px;
+  background-color: #1f1f1f;
+  left: 15px;
+  border-radius: 10px;
+  
+  z-index: 1;
 }
+.profileName{
+  font-family: 'font';
+  color: #d6d6d6;
+  position: fixed;
+  top: 555px;
+  z-index: 2;
+  left: 120px;
+  font-size: 60%;
+}
+
+.profile{
+  position: fixed;
+  top: 555px;
+  z-index: 2;
+  left: 30px;
+  
+  border-radius: 5px;
+}
+
 
 
 

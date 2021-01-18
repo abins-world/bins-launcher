@@ -17,7 +17,11 @@ class Option extends Component<{history: any}> {
 
 
                     
-                        var name = document.getElementById("App3_interfaceoption__3Bi8x");
+                        const name = document.getElementById("App3_interfaceoption__3Bi8x");
+                        if(!name)
+                            return;
+                        
+                        name.style.visibility = 'visible'
                         
 
 
