@@ -57,7 +57,7 @@ class Login extends Component<{history: any}, State> {
       <div className={styles.App}>
         <Link to="/main">개발자모드: 로그인 우회</Link>
         <header className={styles.css}>
-          <img src={logo}  className={styles.logo} alt="logo" />
+          <img src={logo}  className={styles.logo} alt="logo"></img>
           <p className={[styles.font, styles.hello].join(' ')}>
             어빈월드에 온 걸 환영해!
             
@@ -74,7 +74,7 @@ class Login extends Component<{history: any}, State> {
               <p className={[styles.email, styles.i].join(' ')} >
                 이메일
               </p>
-              <input type="text" className={styles.Box} onChange={this.onEmailChange}/>
+              <input type="text" className={styles.Box} onChange={this.onEmailChange}></input>
             </p>
             
 
@@ -89,6 +89,7 @@ class Login extends Component<{history: any}, State> {
                 <input type="password"  className={styles.ps} onChange={this.onPasswordChange}/>
                 <p>
                   <input style={complete} type="button" name="complete" value="로그인" className={styles.complete} ref={a => this.buttonRef[0] = a} onClick={(event) => {
+                   
                     this.buttonRef[0].value = '잠깐만요..'
                     this.buttonRef[0].className = styles['login-in-progress']
                     this.buttonRef[0].disabled = true
@@ -104,7 +105,9 @@ class Login extends Component<{history: any}, State> {
                         this.props.history.push('/main')
                       }
                     })
-                  }}/>
+                  }}
+                  
+                  />
                 </p>
               </p>
               </div>
