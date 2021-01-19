@@ -12,7 +12,7 @@ interface State {
   password: String
 }
 
-class Login extends Component<{history: any}, State> {
+class Login extends Component<{session: any, setSession: any, history: any}, State> {
 
   buttonRef: any
   constructor (props: any){
@@ -42,6 +42,7 @@ class Login extends Component<{history: any}, State> {
   }
 
   render() {
+
     const passworld={
       padding: "0px 0px 20px 0px"
     }
