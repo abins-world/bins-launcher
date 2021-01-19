@@ -15,7 +15,6 @@ interface State {
 class Login extends Component<{history: any}, State> {
 
   buttonRef: any
-
   constructor (props: any){
     super(props);
     this.state = {
@@ -59,12 +58,21 @@ class Login extends Component<{history: any}, State> {
       let auth: Authenticator = new Authenticator()
       auth.authenticate(this.state.email, this.state.password).then((b) => {
         if(!b) {
-          this.buttonRef[0].value = '비밀번호 또는 이메일이 틀렸습니다'
+
+          this.buttonRef[0].value = '로그인'
           this.buttonRef[0].className = styles.complete
           this.buttonRef[0].disabled = false
+          const error = document.getElementById(styles['noterror']);
+          if(error){
+            error.id = styles.error
+          }
+          
+
 
           setTimeout(() =>{
-            this.buttonRef[0].value = '로그인'
+            if(error){
+              error.id = styles.noterror
+            }
           }, 2000);
         } else {
           this.props.history.push('/main')
@@ -114,13 +122,13 @@ class Login extends Component<{history: any}, State> {
 
               <p style={passworld} className={styles.font} >
                 <input type="password"  className={styles.ps} onChange={this.onPasswordChange}/>
-                <p>
+                <p id={styles.noterror} >비밀번호 또는 이메일을 잘못 입력하신거 같아요!</p>
                   <input style={complete} type="button" name="complete" value="로그인" className={styles.complete} ref={a => this.buttonRef[0] = a} onClick={(event) => {
                     login()
                   }}
                   
                   />
-                </p>
+                
               </p>
               </div>
 
