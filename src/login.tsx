@@ -90,8 +90,9 @@ class Login extends Component<{history: any}, State> {
     return (
 
       <div className={styles.App}>
-        <Link to="/main">개발자모드: 로그인 우회</Link>
         <header className={styles.css}>
+          
+          
           <img src={logo}  className={styles.logo} alt="logo"></img>
           <p className={[styles.font, styles.hello].join(' ')}>
             어빈월드에 온 걸 환영해!
@@ -134,7 +135,7 @@ class Login extends Component<{history: any}, State> {
 
             
             
-
+              {/* <Link to="/main">개발자모드: 로그인 우회</Link> */}
             <a
             className={styles.passwordlink}
             href="https://www.minecraft.net/ko-kr/password/forgot"

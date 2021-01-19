@@ -14,7 +14,7 @@ function create_window() {
     kiosk: !isDev,
     icon: path.join(__dirname, '../src/icon/icon.png'),
     resizable: true,
-    backgroundColor: '#f279be',
+    backgroundColor: '#2d2d2d',
     minHeight: 640,
     minWidth: 1200,
     maxHeight: 640,
