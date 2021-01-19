@@ -1,5 +1,6 @@
 import { app, BrowserWindow, session } from 'electron'
 import * as isDev from 'electron-is-dev'
+import { Extension } from 'electron/main'
 import * as path from 'path'
 
 // 1. GC가 일어나지 않도록 밖에 빼줌
