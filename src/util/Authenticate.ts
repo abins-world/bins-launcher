@@ -4,11 +4,7 @@ axios.defaults.withCredentials = false
 
 class Authenticator {
 
-    userInfo: any
-
-    constructor() {
-        this.userInfo = {}
-    }
+    static userInfo: any = {}
 
     async authenticate(email: String, pw: String) : Promise<boolean> {
         let ok = false
@@ -29,7 +25,7 @@ class Authenticator {
             )
 
             ok = true
-            this.userInfo = response.data
+            Authenticator.userInfo = response.data
         } catch(err) {
             if(err.response.status === 403) {
                 ok = false
