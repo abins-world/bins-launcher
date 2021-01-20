@@ -4,18 +4,19 @@ import os from 'os'
 export class LaunchPhases {
 
   getMinecraftFolder() : String {
+    let osdir: String = ''
+    console.log(os.userInfo().homedir)
     switch(os.platform()) {
       case 'win32':
-        return `${os.userInfo().homedir}/AppData/.minecraft`
+        osdir = `${os.userInfo().homedir}/AppData/.minecraft`
+        break
       case 'darwin':
-        return `${os.userInfo().homedir}/Library/Application Support/minecraft`
+        osdir = `${os.userInfo().homedir}/Library/Application Support/minecraft`
+        break
       case 'linux':
-        return `${os.userInfo().homedir}/.minecraft`
+        osdir = `${os.userInfo().homedir}/.minecraft`
+        break
     }
-    throw Error('Can not detect Minecraft Folder')
-  }
-
-  checkFolder() {
-    fs.existsSync('')
+    return osdir
   }
 }

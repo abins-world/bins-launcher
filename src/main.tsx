@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ckdlogo from './icon/CKDtitle.png'
 import styles from './App2.module.css';
 import Authenticator from './util/Authenticate';
+import { LaunchPhases } from './util/LaunchPhases';
 
 
 
@@ -22,7 +23,6 @@ class App extends Component<{history: any}> {
                 <div className={styles.serversTitle}>
                     서버 목록
                 </div>
-                
                     <div className={styles.servers}>
                         <div className={styles.state}>
                             <input style={play}className={styles.play} type="button" name="play" value="플레이"></input>
