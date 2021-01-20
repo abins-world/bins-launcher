@@ -39,7 +39,7 @@ class App extends Component<{history: any}> {
                         rel="noopener noreferrer">
                             <input className={styles.github} type="button" name="github" value=""></input>
                         </a> */}
-                        <img className={styles.profile} src={`https://cravatar.eu/helmavatar/${Authenticator.userInfo.name === '' ? 'A-Bins' : Authenticator.userInfo.name}/50`} alt="profile"></img>   
+                        <img className={styles.profile} src={`https://crafatar.com/avatars/${Authenticator.userInfo.uuid === '' ? 'MHF_Steve' : Authenticator.userInfo.uuid}?size=50`} alt="profile"></img>   
 
                         <span className={styles.profileName}>{Authenticator.userInfo.name === '' ? 'A-Bins' : Authenticator.userInfo.name}</span>
                         <span className={styles.profileTitle}></span>
