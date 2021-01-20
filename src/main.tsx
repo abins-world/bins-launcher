@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ckdlogo from './icon/CKDtitle.png'
 import styles from './App2.module.css';
+import Authenticator from './util/Authenticate';
 
 
 
@@ -38,9 +39,9 @@ class App extends Component<{history: any}> {
                         rel="noopener noreferrer">
                             <input className={styles.github} type="button" name="github" value=""></input>
                         </a> */}
-                        <img className={styles.profile} src="https://cravatar.eu/helmavatar/A_bins/50" alt="profile"></img>   
+                        <img className={styles.profile} src={`https://cravatar.eu/helmavatar/${Authenticator.userInfo.name === '' ? 'A-Bins' : Authenticator.userInfo.name}/50`} alt="profile"></img>   
 
-                        <span className={styles.profileName}>A_bins</span>
+                        <span className={styles.profileName}>{Authenticator.userInfo.name === '' ? 'A-Bins' : Authenticator.userInfo.name}</span>
                         <span className={styles.profileTitle}></span>
                             <div className={styles.options}>
                                 

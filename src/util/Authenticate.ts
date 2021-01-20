@@ -4,7 +4,11 @@ axios.defaults.withCredentials = false
 
 class Authenticator {
 
-    static userInfo: any = {}
+    static userInfo: AccountSession = {
+      accessToken: '',
+      name: '',
+      uuid: ''
+    }
 
     async authenticate(email: String, pw: String) : Promise<boolean> {
         let ok = false
@@ -25,7 +29,11 @@ class Authenticator {
             )
 
             ok = true
-            Authenticator.userInfo = response.data
+            Authenticator.userInfo = {
+              accessToken: response.data.accessToken,
+              name: response.data.selectedProfile.name,
+              uuid: response.data.selectedProfile.id
+            }
         } catch(err) {
             if(err.response.status === 403) {
                 ok = false
@@ -37,4 +45,9 @@ class Authenticator {
     }
 }
 
+export interface AccountSession {
+  accessToken: String,
+  name: String,
+  uuid: String
+}
 export default Authenticator
