@@ -1,10 +1,8 @@
-import fs from 'fs'
-import os from 'os'
-
 export class LaunchPhases {
 
   getMinecraftFolder() : String {
     let osdir: String = ''
+    const os = window.require('electron').remote.require('os')
     console.log(os.userInfo().homedir)
     switch(os.platform()) {
       case 'win32':

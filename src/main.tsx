@@ -9,13 +9,16 @@ import { LaunchPhases } from './util/LaunchPhases';
 class App extends Component<{history: any}> {
     render() {
 
+        const launchphase: LaunchPhases = new LaunchPhases()
+        console.log(launchphase.getMinecraftFolder())
+
         const play={
             padding: "10px 120px 10px 120px"
         }
         return(
 
 
-
+            
             <div className={styles.default}>
                 
                 <header className={styles.App}>
