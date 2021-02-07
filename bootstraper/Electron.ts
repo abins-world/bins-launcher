@@ -47,6 +47,12 @@ function create_window() {
     // 프로덕션 환경에서는 패키지 내부 리소스에 접근
     main_window.loadFile(path.join(__dirname, '../build/index.html'))
   }
+  main_window.webContents.on('devtools-opened', () => {
+    main_window.webContents.executeJavaScript("console.log('%c잠깐만요!!', 'font-size: 48px; color: red')")
+    main_window.webContents.executeJavaScript("console.log('%c여기는 전쟁터입니다... 피하세요!! 이상한거 입력하면 계정이 털릴 수 있어요!', 'font-size: 24px;')")
+    main_window.webContents.executeJavaScript("console.log('%c그러니까, 아무거나 복사 붙여넣기 하면 털릴 수 있어요...', 'font-size: 16px;')")
+    main_window.webContents.executeJavaScript("console.log('%c이게 모른다면, %c그냥 하지 마세요, 'font-size: 16px;', 'font-size: 16px; font-weight: bold')")
+  })
   // Emitted when the window is closed.
 }
 
