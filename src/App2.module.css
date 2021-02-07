@@ -38,6 +38,13 @@
 
 
 }
+.noState {
+  display: none;
+}
+.state {}
+.noPlay {
+  display: none;
+}
 .play:hover{
 	background: #7f1f45;
 	cursor: pointer;

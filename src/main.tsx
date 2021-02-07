@@ -4,13 +4,24 @@ import styles from './App2.module.css';
 import Authenticator from './util/Authenticate';
 import { LaunchPhases } from './util/LaunchPhases';
 
+interface State {
+    status: String
+}
 
+class App extends Component<{history: any}, State> {
 
-class App extends Component<{history: any}> {
+    buttonRef: any
+    constructor (props: any){
+        super(props);
+        this.state = {
+            status: ''
+        }
+        this.buttonRef = []
+      }
+
     render() {
 
-        const launchphase: LaunchPhases = new LaunchPhases()
-        console.log(launchphase.getMinecraftFolder())
+
 
         const play={
             padding: "10px 120px 10px 120px"
@@ -18,7 +29,7 @@ class App extends Component<{history: any}> {
         return(
 
 
-            
+
             <div className={styles.default}>
                 
                 <header className={styles.App}>
@@ -28,7 +39,34 @@ class App extends Component<{history: any}> {
                 </div>
                     <div className={styles.servers}>
                         <div className={styles.state}>
-                            <input style={play}className={styles.play} type="button" name="play" value="플레이"></input>
+                            <input style={play} className={styles.play} type="button" name="play" value="플레이" ref={a => this.buttonRef[0] = a} onClick={async (event: React.MouseEvent) => {
+                                this.buttonRef[0].className = styles.noPlay
+                                this.buttonRef[1].className = 'state'
+                                this.setState({status: '파일 확인중...'})
+                                const launchphase: LaunchPhases = new LaunchPhases()
+                                const check1: boolean = await launchphase.checkFilesExistsAndEdited()
+                                if(!check1) {
+                                    this.setState({status: '모드 다운로드중... (1/2)'})
+                                    await launchphase.downloadFile('http://github.com/abins-world/dist/raw/main/abinworld-mod-1.0-SNAPSHOT.jar', launchphase.getModFolder() + '/mod.jar')
+                                    this.setState({status: '모드 다운로드중... (2/2)'})
+                                    await launchphase.downloadFile('https://www.curseforge.com/minecraft/mc-mods/fabric-api/download/3174110/file', launchphase.getModFolder() + '/fabricApi.jar')
+                                }
+                                this.setState({status: '무결성 확인중... (1/2)'})
+                                const check2 = await launchphase.checkChecksum(launchphase.getModFolder() + '/mod.jar', 'http://github.com/abins-world/dist/raw/main/abinworld-mod-1.0-SNAPSHOT.jar.sha1')
+                                if(!check2) {
+                                    alert('무결성 검사 실패! ' + launchphase.getModFolder() + ' 폴더를 삭제한 뒤에 다시 시도해주세요!')
+                                    window.require('electron').app.exit(1)
+                                }
+                                this.setState({status: '무결성 확인중... (2/2)'})
+                                const check3 = await launchphase.checkChecksum(launchphase.getModFolder() + '/fabricApi.jar', 'http://github.com/abins-world/dist/raw/main/fabricApi.jar.sha1')
+                                if(!check3) {
+                                    alert('무결성 검사 실패! ' + launchphase.getModFolder() + ' 폴더를 삭제한 뒤에 다시 시도해주세요!')
+                                    window.require('electron').app.exit(1)
+                                }
+                                this.setState({status: `${check2}, ${check3}: 통과! 실행 준비중..`})
+                            }}></input>
+
+                            <div className={styles.noState} ref={a => this.buttonRef[1] = a}>{this.state.status}</div>
                             
                         </div>
                         <div>
