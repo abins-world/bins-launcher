@@ -43,7 +43,7 @@ export class LaunchPhases {
   }
 
   async downloadFileGh(address: string, whereTo: string) {
-    let response: any = await this.getRequestedFile('raw.githubusercontent.com', address)
+    let response: any = await this.getRequestedFile('github.com', address)
     const fs = window.require('electron').remote.require('fs')
     const file = fs.createWriteStream(whereTo)
     console.log('File WriteStream Created. Piping...')

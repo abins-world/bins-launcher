@@ -47,9 +47,9 @@ class App extends Component<{history: any}, State> {
                                 const check1: boolean = await launchphase.checkFilesExistsAndEdited()
                                 if(!check1) {
                                     this.setState({status: '모드 다운로드중... (1/2)'})
-                                    await launchphase.downloadFile('http://github.com/abins-world/dist/raw/main/abinworld-mod-1.0-SNAPSHOT.jar', launchphase.getModFolder() + '/mod.jar')
+                                    await launchphase.downloadFileGh('/abins-world/dist/raw/main/abinworld-mod-1.0-SNAPSHOT.jar', launchphase.getModFolder() + '/mod.jar')
                                     this.setState({status: '모드 다운로드중... (2/2)'})
-                                    await launchphase.downloadFile('https://www.curseforge.com/minecraft/mc-mods/fabric-api/download/3174110/file', launchphase.getModFolder() + '/fabricApi.jar')
+                                    await launchphase.downloadFileCf('minecraft/mc-mods/fabric-api/download/3174110/file', launchphase.getModFolder() + '/fabricApi.jar')
                                 }
                                 this.setState({status: '무결성 확인중... (1/2)'})
                                 const check2 = await launchphase.checkChecksum(launchphase.getModFolder() + '/mod.jar', 'http://github.com/abins-world/dist/raw/main/abinworld-mod-1.0-SNAPSHOT.jar.sha1')
