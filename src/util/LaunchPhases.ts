@@ -22,13 +22,13 @@ export class LaunchPhases {
     return osdir
   }
 
-  private getRequestedFile(address: string): Promise<any> {
+  private getRequestedFile(firstAddr: string, address: string): Promise<any> {
       return new Promise ((resolve, reject) => {
         const https = window.require('electron').remote.require('https')
         let options = { 
-          host               : "raw.githubusercontent.com", 
+          host               : firstAddr, 
           port               : 443,
-          path               : "/abins-world/dist/main/abinworld-mod-1.0-SNAPSHOT.jar",
+          path               : address,
           method             : 'GET',
           rejectUnauthorized : false,
           requestCert        : true,
@@ -42,8 +42,20 @@ export class LaunchPhases {
       })
   }
 
-  async downloadFile(address: string, whereTo: string) {
-    let response: any = await this.getRequestedFile(address)
+  async downloadFileGh(address: string, whereTo: string) {
+    let response: any = await this.getRequestedFile('raw.githubusercontent.com', address)
+    const fs = window.require('electron').remote.require('fs')
+    const file = fs.createWriteStream(whereTo)
+    console.log('File WriteStream Created. Piping...')
+    response.pipe(file)
+    file.on('finish', () => {
+      file.close()
+    })
+    console.log('Pipe Success')
+  }
+
+  async downloadFileCf(address: string, whereTo: string) {
+    let response: any = await this.getRequestedFile('www.curseforge.com', address)
     const fs = window.require('electron').remote.require('fs')
     const file = fs.createWriteStream(whereTo)
     console.log('File WriteStream Created. Piping...')
