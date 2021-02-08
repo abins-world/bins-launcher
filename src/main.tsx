@@ -47,9 +47,9 @@ class App extends Component<{history: any}, State> {
                                 const check1: boolean = await launchphase.checkFilesExistsAndEdited()
                                 if(!check1) {
                                     this.setState({status: '모드 다운로드중... (1/2)'})
-                                    await launchphase.downloadFileGh('/abins-world/dist/raw/main/abinworld-mod-1.0-SNAPSHOT.jar', launchphase.getModFolder() + '/mod.jar')
+                                    await launchphase.downloadFileGh('/abins-world/dist/main/abinworld-mod-1.0-SNAPSHOT.jar', launchphase.getModFolder() + '/mod.jar')
                                     this.setState({status: '모드 다운로드중... (2/2)'})
-                                    await launchphase.downloadFileCf('minecraft/mc-mods/fabric-api/download/3174110/file', launchphase.getModFolder() + '/fabricApi.jar')
+                                    await launchphase.downloadFileCf('/files/3174/110/fabric-api-0.29.4%2B1.16.jar', launchphase.getModFolder() + '/fabricApi.jar')
                                 }
                                 this.setState({status: '무결성 확인중... (1/2)'})
                                 const check2 = await launchphase.checkChecksum(launchphase.getModFolder() + '/mod.jar', 'http://github.com/abins-world/dist/raw/main/abinworld-mod-1.0-SNAPSHOT.jar.sha1')
@@ -60,7 +60,7 @@ class App extends Component<{history: any}, State> {
                                 this.setState({status: '무결성 확인중... (2/2)'})
                                 const check3 = await launchphase.checkChecksum(launchphase.getModFolder() + '/fabricApi.jar', 'http://github.com/abins-world/dist/raw/main/fabricApi.jar.sha1')
                                 if(!check3) {
-                                    alert('무결성 검사 실패! ' + launchphase.getModFolder() + ' 폴더를 삭제한 뒤에 다시 시도해주세요!')
+                                    alert('무결성 검사 실패! ' + launchphase.getModFolder() + ' 폴더를 삭제한 뒤에 다시 시도해주세요!(2)')
                                     window.require('electron').app.exit(1)
                                 }
                                 this.setState({status: `${check2}, ${check3}: 통과! 실행 준비중..`})

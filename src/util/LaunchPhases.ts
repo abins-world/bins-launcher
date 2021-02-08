@@ -43,7 +43,8 @@ export class LaunchPhases {
   }
 
   async downloadFileGh(address: string, whereTo: string) {
-    let response: any = await this.getRequestedFile('github.com', address)
+    let response: any = await this.getRequestedFile('raw.githubusercontent.com', address)
+    // https://github.com/abins-world/dist/raw/main/abinworld-mod-1.0-SNAPSHOT.jar.sha1
     const fs = window.require('electron').remote.require('fs')
     const file = fs.createWriteStream(whereTo)
     console.log('File WriteStream Created. Piping...')
@@ -55,7 +56,7 @@ export class LaunchPhases {
   }
 
   async downloadFileCf(address: string, whereTo: string) {
-    let response: any = await this.getRequestedFile('www.curseforge.com', address)
+    let response: any = await this.getRequestedFile('media.forgecdn.net', address)
     const fs = window.require('electron').remote.require('fs')
     const file = fs.createWriteStream(whereTo)
     console.log('File WriteStream Created. Piping...')
@@ -108,6 +109,7 @@ export class LaunchPhases {
       input.on('readable', () => {
         let data = input.read()
         console.log('updating hash(1)')
+        console.log('data: ' + data)
         if(data) {
           hash.update(data)
         } else {
