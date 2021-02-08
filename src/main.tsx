@@ -44,6 +44,13 @@ class App extends Component<{history: any}, State> {
                                 this.buttonRef[1].className = 'state'
                                 this.setState({status: '파일 확인중...'})
                                 const launchphase: LaunchPhases = new LaunchPhases()
+                                const check0: boolean = launchphase.checkInitial()
+                                if(!check0) {
+                                    this.setState({status: '모드로더 설치중... (1/2)'})
+                                    await launchphase.downloadFabric(launchphase.getMinecraftFolder() + '/fabricloader.jar')
+                                    this.setState({status: '모드로더 설치중... (2/2)'})
+                                    await launchphase.execPromise(`java -jar ${launchphase.getMinecraftFolder()}/fabricloader.jar client -dir "${launchphase.getMinecraftFolder()}" -mcversion 1.16.5 -noprofile`)
+                                }
                                 const check1: boolean = await launchphase.checkFilesExistsAndEdited()
                                 if(!check1) {
                                     this.setState({status: '모드 다운로드중... (1/2)'})
@@ -52,16 +59,14 @@ class App extends Component<{history: any}, State> {
                                     await launchphase.downloadFileCf('/files/3174/110/fabric-api-0.29.4%2B1.16.jar', launchphase.getModFolder() + '/fabricApi.jar')
                                 }
                                 this.setState({status: '무결성 확인중... (1/2)'})
-                                const check2 = await launchphase.checkChecksum(launchphase.getModFolder() + '/mod.jar', 'http://github.com/abins-world/dist/raw/main/abinworld-mod-1.0-SNAPSHOT.jar.sha1')
+                                const check2 = await launchphase.checkChecksum(launchphase.getModFolder() + '/mod.jar', 'http://raw.githubusercontent.com/abins-world/dist/main/abinworld-mod-1.0-SNAPSHOT.jar.sha1')
                                 if(!check2) {
-                                    alert('무결성 검사 실패! ' + launchphase.getModFolder() + ' 폴더를 삭제한 뒤에 다시 시도해주세요!')
-                                    window.require('electron').app.exit(1)
+                                    //alert('무결성 검사 실패! ' + launchphase.getModFolder() + ' 폴더를 삭제한 뒤에 다시 시도해주세요!')
                                 }
                                 this.setState({status: '무결성 확인중... (2/2)'})
-                                const check3 = await launchphase.checkChecksum(launchphase.getModFolder() + '/fabricApi.jar', 'http://github.com/abins-world/dist/raw/main/fabricApi.jar.sha1')
+                                const check3 = await launchphase.checkChecksum(launchphase.getModFolder() + '/fabricApi.jar', 'http://raw.githubusercontent.com/abins-world/dist/main/fabricApi.jar.sha1')
                                 if(!check3) {
-                                    alert('무결성 검사 실패! ' + launchphase.getModFolder() + ' 폴더를 삭제한 뒤에 다시 시도해주세요!(2)')
-                                    window.require('electron').app.exit(1)
+                                    //alert('무결성 검사 실패! ' + launchphase.getModFolder() + ' 폴더를 삭제한 뒤에 다시 시도해주세요!(2)')
                                 }
                                 this.setState({status: `${check2}, ${check3}: 통과! 실행 준비중..`})
                             }}></input>
